@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página profissional e moderna com serviços e contato fácil.">
+  <title>Massagem Profissional</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset e Estilos Globais */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --vinho: #800020;
+      --dourado-suave: #d4af37;
+      --dourado-forte: #b8860b;
+      --verde-whatsapp: #25d366;
+      --verde-escuro-whatsapp: #128c7e;
+      --bege-escuro: #e0d5b3;
+      --cinza-suave: #f9f9f9;
+      --texto-escuro: #333;
+      --texto-cinza: #555;
+      --gradient-vinho-dourado: linear-gradient(45deg, #800020, #d4af37);
+    }
+
+    body {
+      font-family: 'Georgia', sans-serif;
+      background-color: var(--bege-escuro);
+      color: var(--texto-escuro);
+      line-height: 1.6;
+    }
+
+    h1, h2, h5 {
+      color: var(--vinho);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      color: #e0e0e0;
+    }
+
+    .btn-highlight {
+      background-color: var(--dourado-suave);
+    }
+
+    .btn-highlight:hover {
+      background-color: var(--dourado-forte);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-contact {
+      background-color: var(--verde-whatsapp);
+    }
+
+    .btn-contact:hover {
+      background-color: var(--verde-escuro-whatsapp);
+      transform: translateY(-3px);
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: var(--vinho);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      background: url('file:///C:/Users/pc/Downloads/17447_01-01-2018%20(2).webp') no-repeat center center/cover;
+    }
+
+    header .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    /* Serviços */
+    .services-section {
+      background-color: var(--cinza-suave);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .services-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      max-width: 300px;
+      border: 5px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+      border-image: var(--gradient-vinho-dourado) 1;
+      border-image-slice: 1;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h5 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      color: var(--texto-cinza);
+    }
+
+    /* Contato */
+    .contact-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      font-size: 1.125rem;
+      margin-bottom: 20px;
+    }
+
+    /* Destaque Adicional */
+    .additional-section {
+      background: var(--gradient-vinho-dourado);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .additional-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .additional-section .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .additional-section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .additional-section p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--vinho);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .services-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .additional-section h3 {
+        font-size: 1.75rem;
+      }
+
+      .additional-section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="header-content">
+      <h1>Harmonia Do Corpo</h1>
+      <p>Relaxe, renove suas energias e descubra o poder do toque para seu bem-estar.</p>
+      <a href="#services" class="btn btn-highlight">Conheça nossos serviços</a>
+    </div>
+  </header>
+
+  <!-- Seção de Serviços -->
+  <section id="services" class="services-section">
+    <h2>O que oferecemos</h2>
+    <p class="section-description">Descubra como podemos ajudar você a alcançar seus objetivos com nossos serviços de alta qualidade.</p>
+    <div class="services-container">
+      <div class="services-row">
+        <div class="card">
+          <img src="https://hamonir.com.br/wp-content/uploads/2022/03/massagem-com-pedras-quentes-1300x731.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5>Massagem Terapêutica</h5>
+            <p>Alivie tensões musculares e promova a saúde do corpo com técnicas especializadas.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://image.tuasaude.com/media/article/uu/it/beneficios-da-massagem_19794_l.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5>Massagem Relaxante</h5>
+            <p>Um momento de puro relaxamento para aliviar o estresse e renovar suas energias.</p>
+          </div>
+        </div>
+      </div>
+      <div class="services-row">
+        <div class="card">
+          <img src="https://www.espacoprana.com.br/wp-content/uploads/2022/02/reflexologia.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5>Reflexologia</h5>
+            <p>Trate pontos específicos do corpo, promovendo equilíbrio e alívio.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://www.jornalfpa.com.br/wp-content/uploads/2022/04/imgdesconto_150166_29.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5>Massagem com Pindas</h5>
+            <p>Relaxe profundamente com o uso das pindas quentes, unindo calor e aromas terapêuticos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="services-row">
+        <div class="card">
+          <img src="https://duohaus.com.br/wp-content/uploads/2018/05/massagem.modelo.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5>Drenagem Linfática Manual</h5>
+            <p>Reduza inchaços e promova desintoxicação com técnicas de drenagem linfática.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://blog.zahra.com.br/wp-content/uploads/2022/10/Copia-de-picdoc-2.png" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5>Back-Massagem</h5>
+            <p>Alivie tensões nas costas com uma massagem focada no relaxamento dessa área.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Adicional -->
+  <section class="additional-section">
+    <div class="content">
+      <h3>Mais momentos para escolher nossos serviços</h3>
+      <p>Realizamos atendimentos também em crianças e idosos, oferecemos atendimento a domicílio e trabalhamos com pacotes familiares e individuais. Aproveite nosso exclusivo <strong>Pacote Fidelidade</strong> e receba benefícios incríveis!</p>
+    </div>
+  </section>
+
+  <!-- Seção de Contato -->
+  <section class="contact-section">
+    <h2>Entre em contato</h2>
+    <p class="section-description">Estamos prontos para atender você. Clique no botão abaixo para falar conosco agora!</p>
+    <a href="https://wa.me/7196271348" target="_blank" class="btn btn-contact">Fale Conosco no WhatsApp</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Harmonia Do Corpo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

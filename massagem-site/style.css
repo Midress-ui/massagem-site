@@ -1,0 +1,181 @@
+/* Reset e Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --vinho: #800020;
+  --dourado-suave: #d4af37;
+  --dourado-forte: #b8860b;
+  --verde-whatsapp: #25d366;
+  --verde-escuro-whatsapp: #128c7e;
+  --bege-escuro: #e0d5b3;
+  --cinza-suave: #f9f9f9;
+  --texto-escuro: #333;
+  --texto-cinza: #555;
+}
+
+/* Corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bege-escuro);
+  color: var(--texto-escuro);
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--vinho);
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--vinho);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: url('URL_DA_IMAGEM_DE_FUNDO_HEADER') no-repeat center center/cover;
+  min-height: 400px;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+header .btn {
+  font-size: 1.25rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: var(--dourado-suave);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+header .btn:hover {
+  background-color: var(--dourado-forte);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Serviços */
+.services-section {
+  background-color: var(--cinza-suave);
+  padding: 80px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-top: -50px;
+  z-index: 2;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--vinho);
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-body h5 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--vinho);
+  margin: 15px 0;
+}
+
+.card-body p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--texto-cinza);
+  margin: 0 10px 15px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Botão de Contato WhatsApp */
+section a {
+  font-size: 1.25rem;
+  padding: 15px 30px;
+  background-color: var(--verde-whatsapp);
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+section a:hover {
+  background-color: var(--verde-escuro-whatsapp);
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: var(--vinho);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.125rem;
+  }
+
+  .services-section h2 {
+    font-size: 2rem;
+  }
+
+  .card-body h5 {
+    font-size: 1.5rem;
+  }
+
+  .card-body p {
+    font-size: 1rem;
+  }
+}
